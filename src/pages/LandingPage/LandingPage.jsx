@@ -1,6 +1,9 @@
 import "./LandingPage.scss"
+import { useState } from "react"
 
 function LandingPage() {
+    const[isDone, setIsDone] = useState(false);
+
   return (
     <>
     <div className="header">
@@ -8,9 +11,9 @@ function LandingPage() {
     </div>
     <div className="tasks">
         <button className="tasks__add">Add Task</button>
-        <div className="tasks_status">
-            <button>Done</button>
-            <button>Active</button>
+        <div className="tasks__status">
+            <button className={`tasks__status-button ${isDone===false && 'active'}`} onClick={()=>setIsDone(true)}>Active</button>
+            <button className={`tasks__status-button ${isDone===true && 'active'}`} onClick={()=>setIsDone(false)}>Done</button>
         </div>
         <div className="tasks__list">
             <div className="tasks__list-item">

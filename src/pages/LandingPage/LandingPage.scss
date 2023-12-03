@@ -1,9 +1,49 @@
 @use "../../styles/typography" as *;
+@use "../../styles/variables" as *;
+
+body{
+    background-color: $secondary-shade;
+    color: white;
+    font-family: Poppins;
+}
 
 .header{
     text-align: center;
     &__content{
-        font-family: Poppins;
+        font-weight: bold;
+        color: #353434;
+        font-size: 4rem;
+    }
+}
+
+.tasks{
+    background-color: #353434;
+    padding: 2%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    // max-height: 80vh;
+    &__add{
+        background-color: $secondary-neon;
+        color: white;
+        border: 0;
+        margin-top: 1.563rem;
+        padding: 0.625rem;
         font-weight: bold;
     }
+    &__status{
+        &-button{
+            background-color: $secondary-neon;
+            color: white;
+            border: 0;
+            margin-top: 1.563rem;
+            padding: 0.625rem;
+            font-weight: bold;
+        }
+    }
+}
+
+.active{
+    background-color: $secondary-dark;
 }
