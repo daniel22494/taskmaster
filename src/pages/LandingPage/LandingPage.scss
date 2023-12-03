@@ -38,7 +38,7 @@ body{
     &__status{
         margin-bottom: 1rem;
         &-button{
-            background-color: $secondary-neon;
+            background-color: $secondary-dark;
             color: white;
             border: 0;
             margin-top: 1.563rem;
@@ -61,7 +61,7 @@ body{
 }
 
 .active{
-    background-color: $secondary-dark;
+    background-color: $secondary-neon;
 }
 
 .actions{

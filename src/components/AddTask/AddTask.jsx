@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { useState } from "react";
 
 
-function AddTask() {
+function AddTask({addTask}) {
     const [isAddTaskOpen, setAddTaskOpen] = useState(false);
     const [taskData, setTaskData] = useState({
         title: "",
@@ -26,8 +26,13 @@ function AddTask() {
     
       const handleSubmit = (event) => {
         event.preventDefault();
-        console.log("Submitted Task Data:", taskData);
+        addTask(taskData);
         toggleAddModal();
+        setTaskData({
+            title: "",
+            description: "",
+            dueDate: "",
+          });
       };
 
   return (
