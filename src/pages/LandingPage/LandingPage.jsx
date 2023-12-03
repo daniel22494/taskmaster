@@ -1,5 +1,8 @@
 import "./LandingPage.scss"
 import { useState } from "react"
+import { MdDeleteForever } from "react-icons/md";
+import { FaRegEdit } from "react-icons/fa";
+import { FaCheckSquare } from "react-icons/fa";
 
 function LandingPage() {
     const[isDone, setIsDone] = useState(false);
@@ -17,9 +20,16 @@ function LandingPage() {
         </div>
         <div className="tasks__list">
             <div className="tasks__list-item">
+                <div>
                 <h3>Title</h3>
                 <p>Description</p>
                 <p>Due date</p>
+                </div>
+                <div className="actions">
+                <FaCheckSquare />
+                <FaRegEdit/>
+                <MdDeleteForever />
+                </div>
 
             </div>
         </div>

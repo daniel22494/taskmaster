@@ -19,10 +19,11 @@ body{
 .tasks{
     background-color: #353434;
     padding: 2%;
-    width: fit-content;
+    width: 40rem;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3%;
+
     // max-height: 80vh;
     &__add{
         background-color: $secondary-neon;
@@ -33,6 +34,7 @@ body{
         font-weight: bold;
     }
     &__status{
+        margin-bottom: 0.7rem;
         &-button{
             background-color: $secondary-neon;
             color: white;
@@ -42,8 +44,24 @@ body{
             font-weight: bold;
         }
     }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        &-item{
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            padding: 1.563rem;
+        }
+    }
 }
 
 .active{
     background-color: $secondary-dark;
+}
+
+.actions{
+    width: 6rem;
+    display: flex;
+    justify-content: space-around;
 }
