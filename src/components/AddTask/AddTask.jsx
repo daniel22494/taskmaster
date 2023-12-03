@@ -5,9 +5,29 @@ import { useState } from "react";
 
 function AddTask() {
     const [isAddTaskOpen, setAddTaskOpen] = useState(false);
+    const [taskData, setTaskData] = useState({
+        title: "",
+        description: "",
+        dueDate: "",
+      });
+    
 
     const toggleAddModal = () => {
         setAddTaskOpen(!isAddTaskOpen);
+      };
+
+      const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setTaskData({
+          ...taskData,
+          [name]: value,
+        });
+      };
+    
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log("Submitted Task Data:", taskData);
+        toggleAddModal();
       };
 
   return (
@@ -21,6 +41,38 @@ function AddTask() {
           <button className="modal-close-button" onClick={toggleAddModal}>
             X
           </button>
+          <form onSubmit={handleSubmit}>
+            <label>
+              Title:
+              <input
+                type="text"
+                name="title"
+                value={taskData.title}
+                onChange={handleInputChange}
+                required
+              />
+            </label>
+            <label>
+              Description:
+              <textarea
+                name="description"
+                value={taskData.description}
+                onChange={handleInputChange}
+                required
+              ></textarea>
+            </label>
+            <label>
+              Due Date:
+              <input
+                type="date"
+                name="dueDate"
+                value={taskData.dueDate}
+                onChange={handleInputChange}
+                required
+              />
+            </label>
+            <button type="submit">Submit</button>
+          </form>
           </div>
 
     </Modal>

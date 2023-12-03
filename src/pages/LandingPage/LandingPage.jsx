@@ -23,9 +23,48 @@ function LandingPage() {
         <div className="tasks__list">
             <div className="tasks__list-item">
                 <div>
-                <h3>Title</h3>
+                <h3>Send Task data to Landing Page</h3>
                 <p>Description</p>
-                <p>Due date</p>
+                <p>December 3rd</p>
+                </div>
+                <div className="actions">
+                <FaCheckSquare />
+                <FaRegEdit/>
+                <MdDeleteForever />
+                </div>
+
+            </div>
+            <div className="tasks__list-item">
+                <div>
+                <h3>Map over task data for rendering</h3>
+                <p>Description</p>
+                <p>December 3rd</p>
+                </div>
+                <div className="actions">
+                <FaCheckSquare />
+                <FaRegEdit/>
+                <MdDeleteForever />
+                </div>
+
+            </div>
+            <div className="tasks__list-item">
+                <div>
+                <h3>Add functionality to the action buttons</h3>
+                <p>Description</p>
+                <p>December 3rd</p>
+                </div>
+                <div className="actions">
+                <FaCheckSquare />
+                <FaRegEdit/>
+                <MdDeleteForever />
+                </div>
+
+            </div>
+            <div className="tasks__list-item">
+                <div>
+                <h3>Integrate React Calendar and make due date interactive</h3>
+                <p>Description</p>
+                <p>December 3rd</p>
                 </div>
                 <div className="actions">
                 <FaCheckSquare />
