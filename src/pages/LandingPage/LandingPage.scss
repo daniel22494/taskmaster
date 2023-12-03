@@ -1,0 +1,9 @@
+@use "../../styles/typography" as *;
+
+.header{
+    text-align: center;
+    &__content{
+        font-family: Poppins;
+        font-weight: bold;
+    }
+}
