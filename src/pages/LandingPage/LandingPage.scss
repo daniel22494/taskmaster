@@ -1,5 +1,6 @@
 @use "../../styles/typography" as *;
 @use "../../styles/variables" as *;
+@use "../../styles/globals" as *;
 
 body{
     background-color: $secondary-shade;
@@ -34,7 +35,7 @@ body{
         font-weight: bold;
     }
     &__status{
-        margin-bottom: 0.7rem;
+        margin-bottom: 1rem;
         &-button{
             background-color: $secondary-neon;
             color: white;
@@ -51,7 +52,7 @@ body{
             background-color: black;
             display: flex;
             justify-content: space-between;
-            padding: 1.563rem;
+            padding: 0.7rem 1.5rem;
         }
     }
 }
@@ -61,7 +62,8 @@ body{
 }
 
 .actions{
-    width: 6rem;
+    width: 7rem;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }

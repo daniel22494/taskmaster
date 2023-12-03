@@ -3,6 +3,8 @@ import { useState } from "react"
 import { MdDeleteForever } from "react-icons/md";
 import { FaRegEdit } from "react-icons/fa";
 import { FaCheckSquare } from "react-icons/fa";
+import AddTask from "../../components/AddTask/AddTask";
+
 
 function LandingPage() {
     const[isDone, setIsDone] = useState(false);
@@ -13,7 +15,7 @@ function LandingPage() {
         <h1 className="header__content">TaskMaster</h1>
     </div>
     <div className="tasks">
-        <button className="tasks__add">Add Task</button>
+        <AddTask/>
         <div className="tasks__status">
             <button className={`tasks__status-button ${isDone===false && 'active'}`} onClick={()=>setIsDone(true)}>Active</button>
             <button className={`tasks__status-button ${isDone===true && 'active'}`} onClick={()=>setIsDone(false)}>Done</button>
